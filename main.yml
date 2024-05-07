@@ -7,10 +7,10 @@
     apache_package: apache2
     apache_service: apache2
 
-  handlers:
-    - name: restart apache  
-      ansible.builtin.service:
-        name: "{{ apache_service }}"
+handlers:
+- name: restart apache  
+  ansible.builtin.service:
+    name: "{{ apache_service }}"
         state: restarted
 
   pre_tasks:
